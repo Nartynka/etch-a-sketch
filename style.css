@@ -1,0 +1,110 @@
+:root {
+	--main-color: #fe4a49;
+	--secondary-color: #fed766;
+	--background-color: #58355e;
+	--main-box-shadow: 3px 3px 1px #000000;
+	--secondary-box-shadow: 2px 2px 3px #000;
+   --main-font: 'Rubik Mono One', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: var(--background-color);
+	color: var(--main-color);
+	font-family: var(--main-font);
+}
+
+h1 {
+	text-align: center;
+	text-shadow: var(--secondary-box-shadow);
+}
+
+#container {
+	display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   justify-items: center;
+   width: 500px;
+   margin: 0 auto;
+}
+
+#grid {
+	display: grid;
+	width: 500px;
+	height: 500px;
+	border: 2px solid #151515;
+	box-shadow: var(--secondary-box-shadow);
+	margin: 0 auto;
+}
+.grid__element {
+	width: 100%;
+	margin: 0;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+   border: none;
+   box-shadow: none;
+   color: var(--main-color);
+	font-family: var(--main-font);
+   background: none;
+   padding: 10px;
+   font-size: 1.2rem;
+   text-shadow: var(--secondary-box-shadow);
+}
+
+.btn:hover,.isEraser {color: var(--secondary-color);}
+
+.isEraser:hover {color: inherit}
+
+.input-container {
+   display: flex;
+   flex-direction: column-reverse;
+   grid-column: span 2;
+}
+
+label[for="size"] {
+  text-align: center;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	height: 31px;
+	width: 500px;
+	background: none;
+   margin: 0 auto;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	background: var(--secondary-color);
+	box-shadow: var(--secondary-box-shadow);
+	width: 100%;
+	height: 10px;
+	cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	box-shadow: var(--main-box-shadow);
+	background: var(--main-color);
+	border: 1px solid #000000;
+	height: 21px;
+	width: 21px;
+	cursor: pointer;
+	margin-top: -6.5px;
+}
+
+footer p {
+   text-align: center;
+   margin: 40px auto;
+   word-spacing: 1rem;
+}
+
+a {
+   color: var(--main-color);
+   text-decoration: none;
+}
+
+a:hover {
+   color: var(--secondary-color)
+}
